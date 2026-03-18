@@ -1,0 +1,1102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sonsie Carpentry Pty Ltd | Renovations & Carpentry | Yarra Valley</title>
+  <meta
+    name="description"
+    content="Sonsie Carpentry Pty Ltd delivers high-quality renovations, extensions, decks, and fine carpentry across Healesville, the Yarra Valley, and surrounding areas."
+  />
+  <meta name="theme-color" content="#171412" />
+  <meta property="og:title" content="Sonsie Carpentry Pty Ltd" />
+  <meta
+    property="og:description"
+    content="High-quality renovation carpentry, extensions, decks, and fine timber work across the Yarra Valley."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_AU" />
+  <meta name="format-detection" content="telephone=yes" />
+
+  <style>
+    :root {
+      --bg: #f6f1ea;
+      --panel: #ffffff;
+      --panel-soft: #f0ebe3;
+      --text: #201c18;
+      --muted: #665f58;
+      --line: #ddd4c9;
+      --dark: #171412;
+      --dark-2: #231f1b;
+      --accent: #a77a47;
+      --accent-soft: #efe5d8;
+      --success: #244736;
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --shadow-sm: 0 10px 24px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.08);
+      --max: 1180px;
+      --header-h: 86px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section { padding: 90px 0; }
+
+    .eyebrow {
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.77rem;
+      color: var(--muted);
+      font-weight: 800;
+      margin: 0 0 14px;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      font-size: clamp(2.8rem, 6.6vw, 5.45rem);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+      margin-bottom: 22px;
+      max-width: 900px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.35rem);
+      line-height: 1.04;
+      letter-spacing: -0.04em;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: 1.26rem;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .lead {
+      font-size: 1.12rem;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .section-head {
+      max-width: 780px;
+      margin-bottom: 42px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 12px;
+      z-index: 1000;
+      background: var(--dark);
+      color: #fff;
+      padding: 12px 16px;
+      border-radius: 12px;
+    }
+
+    .skip-link:focus {
+      left: 12px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(246, 241, 234, 0.82);
+      border-bottom: 1px solid rgba(221, 212, 201, 0.8);
+    }
+
+    .header-inner {
+      min-height: var(--header-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-title {
+      font-size: 1.45rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .brand-sub {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      padding: 10px 12px;
+      border-radius: 12px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.96rem;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+      background: var(--panel);
+      color: var(--text);
+      outline: none;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 14px 22px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      font-weight: 800;
+      transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease, border-color 0.16s ease;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      outline: none;
+    }
+
+    .btn-dark {
+      background: var(--dark);
+      color: #fff;
+      border-color: var(--dark);
+    }
+
+    .btn-accent {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .btn-ghost {
+      background: transparent;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top right, rgba(167, 122, 71, 0.12), transparent 28%),
+        radial-gradient(circle at left bottom, rgba(35, 31, 27, 0.10), transparent 26%),
+        linear-gradient(180deg, #faf7f2 0%, var(--bg) 100%);
+    }
+
+    .hero .wrap {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-grid,
+    .two-col,
+    .contact-grid,
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .hero-content {
+      padding: 56px 0 80px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: var(--shadow-sm);
+      color: #4a433d;
+      font-size: 0.94rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 28px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-points li {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.75);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-weight: 700;
+      color: #4f4740;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .stats-grid,
+    .services-grid,
+    .gallery-grid,
+    .value-grid,
+    .testimonial-grid,
+    .faq-grid,
+    .steps-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .gallery-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .photo-card {
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .photo-placeholder {
+      aspect-ratio: 4 / 3;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      text-align: center;
+      background:
+        linear-gradient(135deg, rgba(167, 122, 71, 0.15), rgba(35, 31, 27, 0.08)),
+        linear-gradient(180deg, #f9f5ef 0%, #efe7dc 100%);
+      color: var(--dark);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .photo-caption {
+      padding: 20px 22px 22px;
+    }
+
+    .value-grid,
+    .faq-grid,
+    .steps-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .testimonial-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card,
+    .service,
+    .value-card,
+    .step-card,
+    .faq,
+    .contact-card,
+    .testimonial,
+    .notice-card,
+    .cta-panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .card-dark,
+    .dark-band,
+    .cta-panel-dark {
+      background: var(--dark);
+      color: #fff;
+      border-color: rgba(255,255,255,0.08);
+    }
+
+    .card-dark p,
+    .dark-band p,
+    .cta-panel-dark p {
+      color: rgba(255,255,255,0.76);
+    }
+
+    .stat-card {
+      min-height: 185px;
+    }
+
+    .stat-kicker {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    .stat-title {
+      font-size: 1.35rem;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+
+    .service {
+      height: 100%;
+    }
+
+    .service-icon,
+    .tick,
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: var(--accent-soft);
+      color: var(--dark);
+      font-weight: 900;
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+
+    .tick {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: #e8f0ea;
+      color: var(--success);
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+
+    .value-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      border-radius: var(--radius-lg);
+      background: var(--panel-soft);
+    }
+
+    .step-card {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .step-number {
+      background: var(--dark);
+      color: #fff;
+    }
+
+    .about-panel {
+      background: linear-gradient(180deg, #fff 0%, #f8f4ee 100%);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .notice-card {
+      background: linear-gradient(180deg, #fffaf3 0%, #f7efe1 100%);
+    }
+
+    .dark-band {
+      padding: 88px 0;
+    }
+
+    .dark-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .testimonial {
+      position: relative;
+      padding-top: 34px;
+    }
+
+    .testimonial::before {
+      content: "“";
+      position: absolute;
+      top: 14px;
+      left: 24px;
+      font-size: 2.4rem;
+      line-height: 1;
+      color: var(--accent);
+      font-weight: 900;
+    }
+
+    .testimonial-name {
+      font-weight: 800;
+      margin-top: 18px;
+    }
+
+    .faq details {
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+
+    .faq details:first-child {
+      border-top: 0;
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    .faq summary {
+      cursor: pointer;
+      list-style: none;
+      font-weight: 800;
+      padding-right: 28px;
+      position: relative;
+    }
+
+    .faq summary::-webkit-details-marker { display: none; }
+
+    .faq summary::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      top: -2px;
+      font-size: 1.4rem;
+      line-height: 1;
+      color: var(--muted);
+    }
+
+    .faq details[open] summary::after {
+      content: "−";
+    }
+
+    .contact-card .row {
+      margin-bottom: 18px;
+    }
+
+    .label {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.76rem;
+      color: var(--muted);
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin: 20px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .mini-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      background: #fff;
+      font-weight: 700;
+    }
+
+    .cta-panel {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      background: linear-gradient(135deg, #1c1815 0%, #2c261f 100%);
+      color: #fff;
+      border-color: rgba(255,255,255,0.08);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .cta-panel p {
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 0;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 26px 0 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-up.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(167, 122, 71, 0.35);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 1100px) {
+      .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .hero-grid,
+      .two-col,
+      .contact-grid,
+      .about-grid,
+      .dark-grid,
+      .cta-panel,
+      .testimonial-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 840px) {
+      .nav {
+        display: none;
+      }
+
+      .header-inner {
+        padding: 16px 0;
+      }
+
+      .hero-content {
+        padding: 34px 0 66px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .section,
+      .dark-band { padding: 68px 0; }
+
+      .wrap { width: min(var(--max), calc(100% - 22px)); }
+
+      .stats-grid,
+      .services-grid,
+      .gallery-grid,
+      .testimonial-grid { grid-template-columns: 1fr; }
+
+      .button-row {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .card,
+      .service,
+      .value-card,
+      .step-card,
+      .faq,
+      .contact-card,
+      .testimonial,
+      .notice-card,
+      .cta-panel {
+        padding: 22px;
+        border-radius: 24px;
+      }
+
+      .step-card {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Sonsie Carpentry home">
+        <span class="brand-title">Sonsie Carpentry</span>
+        <span class="brand-sub">Pty Ltd</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="btn btn-dark" href="#contact">Request a Quote</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid hero-content">
+        <div class="hero-copy fade-up">
+          <div class="hero-badge">Premium Residential Carpentry • Healesville • Yarra Valley & Surrounds</div>
+          <h1>High-quality renovation carpentry built with care, precision, and pride in the finish.</h1>
+          <p class="lead">Sonsie Carpentry Pty Ltd delivers renovations, extensions, decks, outdoor living, and fine carpentry for homeowners who want clear communication, reliable workmanship, and a finished result that genuinely feels well built.</p>
+
+          <div class="button-row">
+            <a class="btn btn-dark" href="#contact">Request a Quote</a>
+            <a class="btn" href="#services">Explore Services</a>
+          </div>
+
+          <ul class="hero-points" aria-label="Key strengths">
+            <li>Clear communication</li>
+            <li>High finish standards</li>
+            <li>Reliable site presence</li>
+            <li>Respect for your home</li>
+          </ul>
+        </div>
+
+        <div class="stats-grid fade-up" aria-label="Business highlights">
+          <article class="card stat-card">
+            <span class="stat-kicker">Built for</span>
+            <h3 class="stat-title">Renovations and extensions where detail matters</h3>
+            <p>Ideal for homeowners, architects, and designers who care about finish quality, site conduct, and getting the job done properly.</p>
+          </article>
+
+          <article class="card stat-card card-dark">
+            <span class="stat-kicker" style="color: rgba(255,255,255,0.66)">Known for</span>
+            <h3 class="stat-title">Calm, professional delivery</h3>
+            <p>Straight communication, honest expectations, and craftsmanship that is meant to last beyond handover.</p>
+          </article>
+
+          <article class="card stat-card" style="background: var(--panel-soft);">
+            <span class="stat-kicker">Service area</span>
+            <h3 class="stat-title">Healesville, Yarra Valley, and surrounding areas</h3>
+            <p>Local to the region, with a strong fit for premium residential projects and tailored timber work.</p>
+          </article>
+
+          <article class="card stat-card">
+            <span class="stat-kicker">What clients want</span>
+            <h3 class="stat-title">Confidence from the first conversation</h3>
+            <p>A better project experience starts before construction begins, with clarity, care, and proper planning.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="wrap">
+        <div class="section-head fade-up">
+          <div class="eyebrow">Services</div>
+          <h2>Carpentry for residential projects where quality is the brief.</h2>
+          <p class="lead">We focus on work that rewards craftsmanship, practical problem-solving, and a sharp eye for detail — not rushed jobs, vague timelines, or cut corners.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service fade-up">
+            <div class="service-icon">01</div>
+            <h3>Renovations</h3>
+            <p>Detailed renovation carpentry for clients who care about finish quality, practical execution, and a result that feels considered from start to finish.</p>
+          </article>
+
+          <article class="service fade-up">
+            <div class="service-icon">02</div>
+            <h3>Extensions & Structural Carpentry</h3>
+            <p>Framing and structural renovation work carried out with strong planning, realistic communication, and proper attention to build quality.</p>
+          </article>
+
+          <article class="service fade-up">
+            <div class="service-icon">03</div>
+            <h3>Decks & Outdoor Living</h3>
+            <p>Decking, pergolas, and outdoor spaces built for long-term durability, clean lines, and everyday use that still looks right years later.</p>
+          </article>
+
+          <article class="service fade-up">
+            <div class="service-icon">04</div>
+            <h3>Fine Timber & Custom Details</h3>
+            <p>Bespoke timber work and detailed carpentry features that bring warmth, character, and precision into the finished home.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="section-head fade-up">
+          <div class="eyebrow">Selected Work</div>
+          <h2>Project highlights ready for your real photos.</h2>
+          <p class="lead">I have laid this out around the strongest project themes I could identify from your Instagram presence, so once your original photos are dropped in, this section will look sharp and relevant fast.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="photo-card fade-up">
+            <div class="photo-placeholder">Carport raise & extension project</div>
+            <div class="photo-caption">
+              <h3>Carport Raise & Extension</h3>
+              <p>A strong before-and-after style feature for structural problem-solving, finish quality, and practical value.</p>
+            </div>
+          </article>
+
+          <article class="photo-card fade-up">
+            <div class="photo-placeholder">Large backyard deck build</div>
+            <div class="photo-caption">
+              <h3>Backyard Deck Transformation</h3>
+              <p>Ideal for showing scale, clean lines, and the kind of outdoor living upgrade homeowners immediately understand.</p>
+            </div>
+          </article>
+
+          <article class="photo-card fade-up">
+            <div class="photo-placeholder">Bathroom renovation carpentry</div>
+            <div class="photo-caption">
+              <h3>Bathroom Renovation Work</h3>
+              <p>Useful for showing detail, coordination, and your comfort with renovation work that demands precision.</p>
+            </div>
+          </article>
+
+          <article class="photo-card fade-up">
+            <div class="photo-placeholder">Front fence & composite deck upgrade</div>
+            <div class="photo-caption">
+              <h3>Fence & Composite Deck Upgrade</h3>
+              <p>A clean visual option for curb appeal, practical upgrades, and polished exterior presentation.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-panel" id="about">
+      <div class="wrap about-grid">
+        <div class="fade-up">
+          <div class="eyebrow">Why Choose Sonsie Carpentry</div>
+          <h2>Premium results come from standards, not slogans.</h2>
+          <p class="lead">At Sonsie Carpentry, the goal is simple: do the job properly, communicate clearly, and deliver work that still looks right long after the build is finished.</p>
+          <p class="lead">Whether the project is a renovation, extension, deck, or custom timber detail, the same principles apply — strong workmanship, honest communication, and pride in the final result.</p>
+        </div>
+
+        <div class="value-grid fade-up">
+          <div class="value-card">
+            <div class="tick">✓</div>
+            <div>
+              <h3>Clear quoting and straight communication</h3>
+              <p>No confusion, no inflated promises, and no hiding behind vague answers when practical decisions need to be made.</p>
+            </div>
+          </div>
+
+          <div class="value-card">
+            <div class="tick">✓</div>
+            <div>
+              <h3>Reliable site presence</h3>
+              <p>Professional conduct, respect for the home, and a calm site presence that gives clients confidence.</p>
+            </div>
+          </div>
+
+          <div class="value-card">
+            <div class="tick">✓</div>
+            <div>
+              <h3>High finish standards</h3>
+              <p>Detail matters. The point is not just to complete the work, but to complete it to a standard worth paying for.</p>
+            </div>
+          </div>
+
+          <div class="value-card">
+            <div class="tick">✓</div>
+            <div>
+              <h3>Respect for budget and timing</h3>
+              <p>Good communication around scope, timing, and expectations helps keep the project cleaner from the start.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="wrap two-col">
+        <div class="fade-up">
+          <div class="eyebrow">Our Process</div>
+          <h2>A smoother build starts with a better process.</h2>
+          <p class="lead">Good projects are not just built well. They are scoped properly, quoted clearly, and communicated honestly before work begins.</p>
+
+          <div class="notice-card" style="margin-top: 28px;">
+            <div class="eyebrow" style="margin-bottom: 10px;">What this means for clients</div>
+            <p style="margin-bottom: 0;">You know who you are dealing with, what the job involves, and what standard the work is being delivered to. That alone removes a lot of stress.</p>
+          </div>
+        </div>
+
+        <div class="steps-grid fade-up">
+          <article class="step-card">
+            <div class="step-number">01</div>
+            <div>
+              <h3>Initial discussion & site visit</h3>
+              <p>We look at the project, understand the scope, and get clear on the level of finish, priorities, and practical constraints before pricing begins.</p>
+            </div>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">02</div>
+            <div>
+              <h3>Quote & planning</h3>
+              <p>You receive a straightforward proposal with realistic expectations, practical advice, and a clear path forward.</p>
+            </div>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">03</div>
+            <div>
+              <h3>Build & deliver</h3>
+              <p>The work is carried out with care, precision, and strong communication from start to finish, with the final result held to a proper standard.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-band">
+      <div class="wrap dark-grid">
+        <article class="cta-panel-dark card fade-up" style="background: var(--dark-2);">
+          <div class="eyebrow" style="color: rgba(255,255,255,0.62)">For Homeowners</div>
+          <h3 style="font-size: 2rem; line-height: 1.08; margin-bottom: 12px;">You want confidence before the build even starts.</h3>
+          <p>Inviting someone into your home is a big decision. You deserve a carpenter who turns up, communicates properly, and takes genuine pride in the outcome.</p>
+        </article>
+
+        <article class="cta-panel-dark card fade-up" style="background: #201b18;">
+          <div class="eyebrow" style="color: rgba(255,255,255,0.62)">For Architects & Designers</div>
+          <h3 style="font-size: 2rem; line-height: 1.08; margin-bottom: 12px;">You want a trade partner who respects the detail.</h3>
+          <p>Sonsie Carpentry is a strong fit for projects where finish quality, design intent, and professional communication matter just as much as pace.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="trust-heading">
+      <div class="wrap">
+        <div class="section-head fade-up">
+          <div class="eyebrow">Positioning</div>
+          <h2 id="trust-heading">The message your website should send in under 30 seconds.</h2>
+          <p class="lead">This version is designed to quickly answer the key questions serious clients ask: What do you do, where do you work, what standard do you operate at, and why should they trust you?</p>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial fade-up">
+            <p><strong>Professional.</strong> The site now feels more established and intentional, which matters for premium residential work.</p>
+            <div class="testimonial-name">Brand signal</div>
+          </article>
+          <article class="testimonial fade-up">
+            <p><strong>Clear.</strong> Navigation, contact paths, and service language are simpler for homeowners to understand quickly.</p>
+            <div class="testimonial-name">User experience</div>
+          </article>
+          <article class="testimonial fade-up">
+            <p><strong>Credible.</strong> The wording aims to sound confident and polished without slipping into generic builder fluff.</p>
+            <div class="testimonial-name">Sales message</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="wrap">
+        <div class="section-head fade-up">
+          <div class="eyebrow">Client Feedback</div>
+          <h2>Strong reviews that support the brand message.</h2>
+          <p class="lead">The feedback around Sonsie Carpentry is consistent: quality workmanship, clear communication, practical ideas, and results that exceed expectations. That is exactly the reputation your website should reinforce.</p>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial fade-up">
+            <p>Clients repeatedly describe the workmanship as meticulous, high quality, and something they would confidently recommend to others.</p>
+            <div class="testimonial-name">Decking client feedback</div>
+          </article>
+
+          <article class="testimonial fade-up">
+            <p>Another clear pattern is that you improve the original idea, communicate well, and deliver a finish that feels above expectation.</p>
+            <div class="testimonial-name">Renovation client feedback</div>
+          </article>
+
+          <article class="testimonial fade-up">
+            <p>Recent feedback also highlights difficult structural work being handled calmly and professionally, with the final result exceeding what the client hoped for.</p>
+            <div class="testimonial-name">Carport project feedback</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap contact-grid">
+        <div class="fade-up">
+          <div class="eyebrow">Frequently Asked</div>
+          <h2>A few common questions.</h2>
+          <p class="lead">These answers help remove friction for serious leads before they even pick up the phone.</p>
+        </div>
+
+        <div class="faq fade-up">
+          <details open>
+            <summary>What type of projects do you take on?</summary>
+            <p>Sonsie Carpentry focuses on residential renovations, extensions, decks, outdoor living areas, and detail-driven timber work where quality matters.</p>
+          </details>
+
+          <details>
+            <summary>Do you work with architects and designers?</summary>
+            <p>Yes. The business is well suited to projects that require attention to drawings, finish details, design intent, and professional communication.</p>
+          </details>
+
+          <details>
+            <summary>Do you quote before construction starts?</summary>
+            <p>Yes. Every project starts with a proper understanding of the scope, site conditions, and expected result so the proposal reflects the real job, not guesswork.</p>
+          </details>
+
+          <details>
+            <summary>Where do you work?</summary>
+            <p>Based in Healesville, Sonsie Carpentry services the Yarra Valley and surrounding areas for suitable residential projects.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" style="padding-top: 24px;">
+      <div class="wrap">
+        <div class="cta-panel fade-up">
+          <div>
+            <div class="eyebrow" style="color: rgba(255,255,255,0.65)">Get In Touch</div>
+            <h2 style="margin-bottom: 12px; color: #fff;">Planning a renovation or premium carpentry project?</h2>
+            <p>Reach out to discuss your plans, request a quote, or start a straightforward conversation about your project.</p>
+          </div>
+          <div class="button-row" style="margin-top: 0;">
+            <a class="btn btn-accent" href="mailto:admin@sonsiecarpentry.com">Email Now</a>
+            <a class="btn" href="tel:0449738233" style="background: #fff;">Call 0449 738 233</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap" style="margin-top: 24px;">
+        <div class="contact-grid">
+          <div class="contact-card fade-up">
+            <div class="eyebrow">Business Details</div>
+            <div class="row">
+              <span class="label">Business</span>
+              <strong>Sonsie Carpentry Pty Ltd</strong>
+            </div>
+            <div class="row">
+              <span class="label">Service Area</span>
+              <div>Healesville, Yarra Valley, and surrounding areas</div>
+            </div>
+            <div class="row">
+              <span class="label">Email</span>
+              <div><a href="mailto:admin@sonsiecarpentry.com">admin@sonsiecarpentry.com</a></div>
+            </div>
+            <div class="row" style="margin-bottom: 0;">
+              <span class="label">Phone</span>
+              <div><a href="tel:0449738233">0449 738 233</a></div>
+            </div>
+          </div>
+
+          <div class="contact-card fade-up">
+            <div class="eyebrow">Why this section matters</div>
+            <h3>Make it easy for serious clients to act.</h3>
+            <p>The biggest mistake on small trade websites is making people work too hard to contact you. This version gives them multiple simple ways to move forward.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px;">
+              <span class="mini-chip">Fast contact path</span>
+              <span class="mini-chip">Mobile-friendly buttons</span>
+              <span class="mini-chip">Cleaner trust signal</span>
+            </div>
+            <ul class="contact-list">
+              <li><span class="tick">✓</span><span>Clear call-to-action at the top of the page</span></li>
+              <li><span class="tick">✓</span><span>Simple navigation for visitors who want more detail</span></li>
+              <li><span class="tick">✓</span><span>Strong contact section without clutter</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>© <span id="year"></span> Sonsie Carpentry Pty Ltd. All rights reserved.</div>
+      <div>Built for premium residential carpentry in the Yarra Valley.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+
+    document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
