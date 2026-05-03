@@ -4,308 +4,284 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sonsie Carpentry Pty Ltd | Renovations & Bathroom Renovations | Healesville</title>
-  <meta name="description" content="Sonsie Carpentry Pty Ltd delivers bathroom renovations, custom carpentry, decks, outdoor living and renovation advice across Healesville and the Yarra Valley." />
+  <meta name="description" content="Sonsie Carpentry Pty Ltd delivers bathroom renovations, custom carpentry, decks, outdoor living, renovations and practical property advice across Healesville and the Yarra Valley." />
 
   <style>
     :root{
       --bg:#050705;
-      --panel:#101510;
-      --panel2:#151c15;
-      --green:#19ED1A;
+      --panel:#0e130e;
+      --panel2:#151b15;
       --text:#f5f7f2;
       --muted:#b8c2b7;
+      --green:#19ED1A;
       --line:rgba(255,255,255,.12);
-      --max:1160px;
+      --shadow:0 24px 70px rgba(0,0,0,.38);
+      --max:1180px;
     }
 
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Arial,Helvetica,sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.6;
-    }
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max),calc(100% - 32px));margin:auto}
 
-    img{display:block;width:100%}
-    a{text-decoration:none;color:inherit}
+    header{position:sticky;top:0;z-index:20;background:rgba(5,7,5,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .head{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand strong{display:block;font-size:1.35rem;letter-spacing:-.04em}
+    .brand span{color:var(--green);font-size:.72rem;text-transform:uppercase;letter-spacing:.22em;font-weight:900}
+    nav{display:flex;gap:8px;flex-wrap:wrap}
+    nav a{padding:10px 12px;border-radius:12px;color:var(--muted);font-weight:800}
+    nav a:hover{background:rgba(255,255,255,.06);color:#fff}
 
-    .wrap{
-      width:min(var(--max),calc(100% - 32px));
-      margin:auto;
-    }
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:13px 20px;border-radius:16px;border:1px solid var(--line);font-weight:900}
+    .btn-primary{background:var(--green);color:#041004;border-color:var(--green)}
+    .btn-dark{background:rgba(0,0,0,.55);color:white}
 
-    header{
-      position:sticky;
-      top:0;
-      z-index:10;
-      background:rgba(5,7,5,.92);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid var(--line);
-    }
-
-    .nav{
-      min-height:76px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-    }
-
-    .brand strong{
-      display:block;
-      font-size:1.35rem;
-      letter-spacing:-.04em;
-    }
-
-    .brand span{
-      display:block;
-      color:var(--green);
-      font-size:.72rem;
-      font-weight:900;
-      letter-spacing:.22em;
-      text-transform:uppercase;
-      margin-top:4px;
-    }
-
-    nav{
-      display:flex;
-      gap:18px;
-      align-items:center;
-    }
-
-    nav a{
-      color:var(--muted);
-      font-weight:800;
-      font-size:.95rem;
-    }
-
-    nav a:hover{color:white}
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:50px;
-      padding:13px 20px;
-      border-radius:16px;
-      font-weight:900;
-      border:1px solid var(--line);
-    }
-
-    .btn-primary{
-      background:var(--green);
-      color:#031003;
-      border-color:var(--green);
-    }
-
-    .btn-dark{
-      background:rgba(0,0,0,.55);
-      color:white;
-    }
-
-    .hero{
-      min-height:88vh;
-      display:flex;
-      align-items:center;
-      background:
-        linear-gradient(90deg,rgba(5,7,5,.94),rgba(5,7,5,.66),rgba(5,7,5,.9)),
-        url("hero.jpg") center/cover no-repeat;
-    }
-
-    .hero-content{
-      max-width:920px;
-      padding:90px 0;
-    }
-
-    .eyebrow{
-      color:var(--green);
-      text-transform:uppercase;
-      letter-spacing:.18em;
-      font-size:.78rem;
-      font-weight:900;
-      margin-bottom:14px;
-      display:inline-block;
-    }
-
+    .hero{position:relative;min-height:88vh;display:flex;align-items:center;background:
+      linear-gradient(90deg,rgba(5,7,5,.94),rgba(5,7,5,.62),rgba(5,7,5,.88)),
+      url("hero.jpg") center/cover no-repeat;overflow:hidden}
+    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(5,7,5,.95)),radial-gradient(circle at 78% 22%,rgba(25,237,26,.18),transparent 32%)}
+    .hero-content{position:relative;z-index:1;padding:90px 0;max-width:950px}
+    .eyebrow{display:inline-block;color:var(--green);text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;font-weight:900;margin-bottom:14px}
     h1,h2,h3,p{margin-top:0}
+    h1{font-size:clamp(3rem,7vw,6rem);line-height:.94;letter-spacing:-.065em;margin-bottom:24px}
+    h2{font-size:clamp(2rem,4vw,3.45rem);line-height:1.04;letter-spacing:-.045em;margin-bottom:18px}
+    h3{font-size:1.2rem;line-height:1.15;margin-bottom:10px}
+    .lead{color:var(--muted);font-size:1.15rem;max-width:760px}
+    .hero .lead{color:#e7ede4;font-size:1.25rem}
+    .buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+    .pills{display:flex;gap:12px;flex-wrap:wrap;list-style:none;padding:0;margin:30px 0 0}
+    .pills li{border:1px solid rgba(25,237,26,.24);background:rgba(25,237,26,.08);padding:10px 14px;border-radius:999px;font-weight:800;color:#e5ffe5}
 
-    h1{
-      font-size:clamp(3rem,7vw,6rem);
-      line-height:.94;
-      letter-spacing:-.065em;
-      margin-bottom:24px;
-    }
+    section{padding:92px 0}
+    .dark{background:linear-gradient(180deg,#070907,#0b100b);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .image-section{background:linear-gradient(135deg,rgba(5,7,5,.92),rgba(5,7,5,.86)),url("bathroom3-renovation.jpg") center/cover no-repeat;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .section-head{max-width:850px;margin-bottom:42px}
 
-    h2{
-      font-size:clamp(2rem,4vw,3.4rem);
-      line-height:1.04;
-      letter-spacing:-.045em;
-      margin-bottom:18px;
-    }
-
-    h3{
-      font-size:1.22rem;
-      line-height:1.15;
-      margin-bottom:10px;
-    }
-
-    .lead{
-      color:var(--muted);
-      font-size:1.15rem;
-      max-width:760px;
-    }
-
-    .hero .lead{
-      color:#e8eee5;
-      font-size:1.25rem;
-    }
-
-    .actions{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      margin-top:32px;
-    }
-
-    .tags{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      list-style:none;
-      padding:0;
-      margin:30px 0 0;
-    }
-
-    .tags li{
-      border:1px solid rgba(25,237,26,.25);
-      background:rgba(25,237,26,.08);
-      color:#e4ffe4;
-      border-radius:999px;
-      padding:10px 14px;
-      font-weight:800;
-    }
-
-    section{padding:88px 0}
-
-    .dark{
-      background:
-        radial-gradient(circle at top right,rgba(25,237,26,.08),transparent 24%),
-        linear-gradient(180deg,#070907,#0b100b);
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-    }
-
-    .image-section{
-      background:
-        linear-gradient(135deg,rgba(5,7,5,.93),rgba(5,7,5,.88)),
-        url("bathroom3-renovation.jpg") center/cover no-repeat;
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-    }
-
-    .section-head{
-      max-width:850px;
-      margin-bottom:40px;
-    }
-
-    .grid-3{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
-    }
-
-    .grid-2{
-      display:grid;
-      grid-template-columns:.95fr 1.05fr;
-      gap:34px;
-      align-items:start;
-    }
-
-    .card{
-      background:linear-gradient(180deg,var(--panel),var(--panel2));
-      border:1px solid var(--line);
-      border-radius:28px;
-      overflow:hidden;
-      box-shadow:0 18px 50px rgba(0,0,0,.3);
-    }
-
-    .card.pad{padding:28px}
-
-    .card.feature{
-      border-color:rgba(25,237,26,.28);
-      background:
-        linear-gradient(180deg,rgba(25,237,26,.1),rgba(25,237,26,.03)),
-        linear-gradient(180deg,var(--panel),var(--panel2));
-    }
-
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid2{display:grid;grid-template-columns:.95fr 1.05fr;gap:34px;align-items:start}
+    .card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:0 14px 38px rgba(0,0,0,.24)}
+    .card.feature{border-color:rgba(25,237,26,.28);background:linear-gradient(180deg,rgba(25,237,26,.1),rgba(25,237,26,.03)),linear-gradient(180deg,var(--panel),var(--panel2))}
     .card p{color:var(--muted);margin-bottom:0}
+    .num{display:inline-grid;place-items:center;width:48px;height:48px;border-radius:14px;background:rgba(25,237,26,.12);color:var(--green);font-weight:900;margin-bottom:16px}
 
-    .project-main{
-      display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:18px;
+    .projects{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .project{padding:0;overflow:hidden}
+    .project img{width:100%;height:320px;object-fit:cover;background:#111}
+    .project.big img{height:520px}
+    .project-copy{padding:22px}
+    .side{display:grid;gap:18px}
+
+    .process{display:grid;gap:16px}
+    .process-card{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
+    .process-no{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:14px;background:var(--green);color:#041004;font-weight:900}
+
+    .quote{padding:46px 0;background:#020302;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .quote-panel{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;background:radial-gradient(circle at top right,rgba(25,237,26,.16),transparent 26%),linear-gradient(135deg,#000,#0f160f);border:1px solid rgba(25,237,26,.22);border-radius:30px;padding:30px;box-shadow:var(--shadow)}
+
+    .contact-list{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:13px}
+    .contact-list li{display:flex;gap:12px;color:var(--muted)}
+    .tick{display:inline-grid;place-items:center;width:34px;height:34px;flex-shrink:0;border-radius:10px;background:rgba(25,237,26,.12);color:var(--green);font-weight:900}
+
+    footer{padding:28px 0 42px;color:var(--muted);font-size:.95rem;background:#030503;border-top:1px solid var(--line)}
+    .foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+
+    @media(max-width:980px){
+      nav{display:none}
+      .grid3,.grid2,.projects{grid-template-columns:1fr}
+      .project.big img,.project img{height:320px}
+      .quote-panel{grid-template-columns:1fr}
     }
-
-    .project-card img{
-      height:330px;
-      object-fit:cover;
+    @media(max-width:640px){
+      .wrap{width:min(var(--max),calc(100% - 22px))}
+      .hero{min-height:auto}
+      .hero-content{padding:70px 0}
+      section{padding:70px 0}
+      .buttons{flex-direction:column}
+      .btn{width:100%}
+      .card{border-radius:24px;padding:22px}
+      .project{padding:0}
+      .project.big img,.project img{height:250px}
     }
+  </style>
+</head>
 
-    .project-card.large img{
-      height:540px;
-    }
+<body>
+<header>
+  <div class="wrap head">
+    <a class="brand" href="#top">
+      <strong>Sonsie Carpentry</strong>
+      <span>Pty Ltd</span>
+    </a>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#strategy">Property Strategy</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="#contact">Request a Quote</a>
+  </div>
+</header>
 
-    .project-copy{
-      padding:22px;
-    }
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-content">
+      <span class="eyebrow">Healesville • Yarra Valley • Renovation Carpentry</span>
+      <h1>Premium renovations and bathroom renovations built properly.</h1>
+      <p class="lead">Sonsie Carpentry Pty Ltd delivers bathroom renovations, custom carpentry, decks, outdoor structures and practical renovation advice for homeowners who care about the final result.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#projects">View Work</a>
+        <a class="btn btn-dark" href="#contact">Contact Sonsie Carpentry</a>
+      </div>
+      <ul class="pills">
+        <li>Bathroom renovations</li>
+        <li>All aspects of renovation</li>
+        <li>Custom carpentry</li>
+        <li>Decks & outdoor living</li>
+        <li>Trade coordination</li>
+      </ul>
+    </div>
+  </section>
 
-    .side-projects{
-      display:grid;
-      gap:18px;
-    }
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Featured Projects</span>
+        <h2>Real work. Strong finish. Built with care.</h2>
+        <p class="lead">Original project photos showing renovation detail, timber work, bathroom finish quality and practical craftsmanship.</p>
+      </div>
 
-    .number{
-      display:inline-grid;
-      place-items:center;
-      width:48px;
-      height:48px;
-      border-radius:14px;
-      background:rgba(25,237,26,.12);
-      color:var(--green);
-      font-weight:900;
-      margin-bottom:16px;
-    }
+      <div class="projects">
+        <article class="card project big">
+          <img src="bathroom3-renovation.jpg" alt="Bathroom renovation by Sonsie Carpentry">
+          <div class="project-copy">
+            <h3>Bathroom Renovation</h3>
+            <p>Clean, high-end bathroom renovation with strong layout, material finish, natural light and detailed execution.</p>
+          </div>
+        </article>
 
-    .process{
-      display:grid;
-      gap:16px;
-    }
+        <div class="side">
+          <article class="card project">
+            <img src="header.jpg" alt="Custom carpentry project by Sonsie Carpentry">
+            <div class="project-copy">
+              <h3>Custom Carpentry</h3>
+              <p>Feature carpentry and renovation work focused on detail, proportion and presentation.</p>
+            </div>
+          </article>
 
-    .process-card{
-      display:grid;
-      grid-template-columns:auto 1fr;
-      gap:18px;
-      align-items:start;
-    }
+          <article class="card project">
+            <img src="main.jpg" alt="Decking and outdoor work by Sonsie Carpentry">
+            <div class="project-copy">
+              <h3>Decking & Outdoor Work</h3>
+              <p>Outdoor timber work built for durability, usability and long-term visual appeal.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    .process-card .number{
-      background:var(--green);
-      color:#031003;
-      margin-bottom:0;
-    }
+  <section class="dark" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Services</span>
+        <h2>All aspects of renovation, with the details handled properly.</h2>
+        <p class="lead">From bathroom renovations and decks to trade coordination and property advice, the focus is practical planning, reliable communication and a quality finished result.</p>
+      </div>
 
-    .contact-list{
-      list-style:none;
-      padding:0;
-      margin:22px 0 0;
-      display:grid;
-      gap:12px;
-    }
+      <div class="grid3">
+        <article class="card feature"><span class="num">01</span><h3>Bathroom Renovations</h3><p>Bathroom renovation carpentry with attention to layout, preparation, finishes and trade coordination.</p></article>
+        <article class="card"><span class="num">02</span><h3>Home Renovations</h3><p>Renovation work across bathrooms, kitchens, laundries, living spaces and existing homes.</p></article>
+        <article class="card"><span class="num">03</span><h3>Decks & Outdoor Living</h3><p>Decking, covered areas and external timber work built for durability and presentation.</p></article>
+        <article class="card"><span class="num">04</span><h3>Custom Carpentry</h3><p>Feature timber work, detailed finishes and practical carpentry solutions that lift the final result.</p></article>
+        <article class="card"><span class="num">05</span><h3>Extensions & Structural Carpentry</h3><p>Framing, structural upgrades and renovation carpentry delivered with care and control.</p></article>
+        <article class="card feature"><span class="num">06</span><h3>Trade Coordination</h3><p>Access to trusted trades with timing, communication and project coordination managed properly.</p></article>
+      </div>
+    </div>
+  </section>
 
-    .contact-list li{
-      color:var(--muted);
-    }
+  <section class="image-section" id="strategy">
+    <div class="wrap grid2">
+      <div>
+        <span class="eyebrow">Property Strategy</span>
+        <h2>Practical renovation advice before you commit big money.</h2>
+        <p class="lead">Sonsie Carpentry can help buyers, sellers and homeowners understand hidden renovation costs, must-do works, improvement priorities and where money is best spent.</p>
+        <div class="buttons"><a class="btn btn-primary" href="#contact">Ask About Property Advice</a></div>
+      </div>
 
-    footer{
+      <div class="process">
+        <article class="card feature"><h3>Pre-Purchase Renovation Evaluation</h3><p>Understand pros, cons, hidden potential, future renovation costs and essential must-do works before buying.</p></article>
+        <article class="card"><h3>Pre-Sale Improvement Strategy</h3><p>Identify cost-effective improvements to prepare a home for market and improve buyer appeal without overcapitalising.</p></article>
+        <article class="card"><h3>Renovation Priority Planning</h3><p>Separate urgent work from important upgrades and optional improvements so the project starts in the right order.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap grid2">
+      <div>
+        <span class="eyebrow">Process</span>
+        <h2>A clear process from first conversation to finished result.</h2>
+        <p class="lead">Good renovation work starts with understanding the property, the goal, the risks and the correct order of work.</p>
+      </div>
+
+      <div class="process">
+        <article class="card process-card"><span class="process-no">01</span><div><h3>Initial Discussion</h3><p>We talk through the property, goal, budget pressure and what needs to be achieved.</p></div></article>
+        <article class="card process-card"><span class="process-no">02</span><div><h3>Site Review</h3><p>The property is reviewed so scope, risk, access and finish expectations are clear.</p></div></article>
+        <article class="card process-card"><span class="process-no">03</span><div><h3>Planning & Quote</h3><p>The work is scoped with practical advice around priorities, timing and trade coordination.</p></div></article>
+        <article class="card process-card"><span class="process-no">04</span><div><h3>Build & Finish</h3><p>The project is delivered with attention to detail, clean site conduct and strong final presentation.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="wrap">
+      <div class="quote-panel">
+        <div>
+          <span class="eyebrow">Best Fit</span>
+          <h2>For homeowners who care about the result.</h2>
+          <p class="lead">Best suited to serious renovations, bathroom upgrades, pre-sale improvements and buyers wanting real renovation insight before purchase.</p>
+        </div>
+        <a class="btn btn-primary" href="#contact">Start a Conversation</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" id="contact">
+    <div class="wrap grid2">
+      <div>
+        <span class="eyebrow">Contact</span>
+        <h2>Planning a renovation, bathroom upgrade or custom carpentry project?</h2>
+        <p class="lead">Enquiries are welcome for quality residential projects across Healesville, the Yarra Valley and surrounding areas.</p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="tel:0449738233">Call 0449 738 233</a>
+          <a class="btn btn-dark" href="mailto:admin@sonsiecarpentry.com">Email Sonsie Carpentry</a>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3>Sonsie Carpentry Pty Ltd</h3>
+        <p><strong>Phone:</strong> <a href="tel:0449738233">0449 738 233</a></p>
+        <p><strong>Email:</strong> <a href="mailto:admin@sonsiecarpentry.com">admin@sonsiecarpentry.com</a></p>
+        <p><strong>Area:</strong> Healesville, Yarra Valley and surrounding areas</p>
+        <ul class="contact-list">
+          <li><span class="tick">✓</span><span>Bathroom renovations</span></li>
+          <li><span class="tick">✓</span><span>All aspects of renovation</span></li>
+          <li><span class="tick">✓</span><span>Custom carpentry and decks</span></li>
+          <li><span class="tick">✓</span><span>Pre-purchase and pre-sale renovation advice</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© Sonsie Carpentry Pty Ltd. All rights reserved.</div>
+    <div>Premium renovations, bathroom renovations and custom carpentry.</div>
+  </div>
+</footer>
+</body>
+</html>
