@@ -1,148 +1,311 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sonsie Carpentry Pty Ltd | Renovations & Bathroom Renovations | Healesville</title>
+  <meta name="description" content="Sonsie Carpentry Pty Ltd delivers bathroom renovations, custom carpentry, decks, outdoor living and renovation advice across Healesville and the Yarra Valley." />
 
-<title>Sonsie Carpentry | Premium Renovations</title>
+  <style>
+    :root{
+      --bg:#050705;
+      --panel:#101510;
+      --panel2:#151c15;
+      --green:#19ED1A;
+      --text:#f5f7f2;
+      --muted:#b8c2b7;
+      --line:rgba(255,255,255,.12);
+      --max:1160px;
+    }
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #050705;
-  color: white;
-}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
 
-/* HEADER */
-header {
-  position: sticky;
-  top: 0;
-  background: rgba(0,0,0,0.9);
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  z-index: 10;
-}
+    img{display:block;width:100%}
+    a{text-decoration:none;color:inherit}
 
-header a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
+    .wrap{
+      width:min(var(--max),calc(100% - 32px));
+      margin:auto;
+    }
 
-/* HERO */
-.hero {
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  padding: 40px;
-  background:
-    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-    url("hero.jpg") center/cover no-repeat;
-}
+    header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(5,7,5,.92);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
 
-.hero h1 {
-  font-size: 3rem;
-  max-width: 600px;
-}
+    .nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
 
-/* SECTION */
-.section {
-  padding: 60px 20px;
-}
+    .brand strong{
+      display:block;
+      font-size:1.35rem;
+      letter-spacing:-.04em;
+    }
 
-/* PROJECTS */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
+    .brand span{
+      display:block;
+      color:var(--green);
+      font-size:.72rem;
+      font-weight:900;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      margin-top:4px;
+    }
 
-.card {
-  background: #111;
-  border-radius: 10px;
-  overflow: hidden;
-}
+    nav{
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
 
-.card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-}
+    nav a{
+      color:var(--muted);
+      font-weight:800;
+      font-size:.95rem;
+    }
 
-.card h3 {
-  padding: 10px;
-}
+    nav a:hover{color:white}
 
-/* DARK STRIP */
-.dark {
-  background: #0a0f0a;
-}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:50px;
+      padding:13px 20px;
+      border-radius:16px;
+      font-weight:900;
+      border:1px solid var(--line);
+    }
 
-/* CONTACT */
-.contact {
-  background: #000;
-  padding: 40px;
-}
-</style>
-</head>
+    .btn-primary{
+      background:var(--green);
+      color:#031003;
+      border-color:var(--green);
+    }
 
-<body>
+    .btn-dark{
+      background:rgba(0,0,0,.55);
+      color:white;
+    }
 
-<header>
-  <h2>Sonsie Carpentry</h2>
-  <div>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
-</header>
+    .hero{
+      min-height:88vh;
+      display:flex;
+      align-items:center;
+      background:
+        linear-gradient(90deg,rgba(5,7,5,.94),rgba(5,7,5,.66),rgba(5,7,5,.9)),
+        url("hero.jpg") center/cover no-repeat;
+    }
 
-<section class="hero">
-  <h1>Premium Renovations & Bathroom Renovations Built Properly</h1>
-</section>
+    .hero-content{
+      max-width:920px;
+      padding:90px 0;
+    }
 
-<section id="projects" class="section">
-  <h2>Projects</h2>
+    .eyebrow{
+      color:var(--green);
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-size:.78rem;
+      font-weight:900;
+      margin-bottom:14px;
+      display:inline-block;
+    }
 
-  <div class="projects">
+    h1,h2,h3,p{margin-top:0}
 
-    <div class="card">
-      <img src="bathroom3-renovation.jpg">
-      <h3>Bathroom Renovation</h3>
-    </div>
+    h1{
+      font-size:clamp(3rem,7vw,6rem);
+      line-height:.94;
+      letter-spacing:-.065em;
+      margin-bottom:24px;
+    }
 
-    <div class="card">
-      <img src="header.jpg">
-      <h3>Custom Carpentry</h3>
-    </div>
+    h2{
+      font-size:clamp(2rem,4vw,3.4rem);
+      line-height:1.04;
+      letter-spacing:-.045em;
+      margin-bottom:18px;
+    }
 
-    <div class="card">
-      <img src="main.jpg">
-      <h3>Decking & Outdoor Work</h3>
-    </div>
+    h3{
+      font-size:1.22rem;
+      line-height:1.15;
+      margin-bottom:10px;
+    }
 
-    <div class="card">
-      <img src="hero.jpg">
-      <h3>Renovation Work</h3>
-    </div>
+    .lead{
+      color:var(--muted);
+      font-size:1.15rem;
+      max-width:760px;
+    }
 
-  </div>
-</section>
+    .hero .lead{
+      color:#e8eee5;
+      font-size:1.25rem;
+    }
 
-<section class="section dark">
-  <h2 style="padding:0 20px;">Property Strategy</h2>
-  <p style="padding:0 20px; max-width:600px;">
-    Pre-purchase and pre-sale renovation advice to help you avoid hidden costs and make smarter decisions before spending big money.
-  </p>
-</section>
+    .actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:32px;
+    }
 
-<section id="contact" class="contact">
-  <h2>Contact</h2>
-  <p>Phone: 0449 738 233</p>
-  <p>Email: admin@sonsiecarpentry.com</p>
-</section>
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      list-style:none;
+      padding:0;
+      margin:30px 0 0;
+    }
 
-</body>
-</html>
+    .tags li{
+      border:1px solid rgba(25,237,26,.25);
+      background:rgba(25,237,26,.08);
+      color:#e4ffe4;
+      border-radius:999px;
+      padding:10px 14px;
+      font-weight:800;
+    }
+
+    section{padding:88px 0}
+
+    .dark{
+      background:
+        radial-gradient(circle at top right,rgba(25,237,26,.08),transparent 24%),
+        linear-gradient(180deg,#070907,#0b100b);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .image-section{
+      background:
+        linear-gradient(135deg,rgba(5,7,5,.93),rgba(5,7,5,.88)),
+        url("bathroom3-renovation.jpg") center/cover no-repeat;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .section-head{
+      max-width:850px;
+      margin-bottom:40px;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:34px;
+      align-items:start;
+    }
+
+    .card{
+      background:linear-gradient(180deg,var(--panel),var(--panel2));
+      border:1px solid var(--line);
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:0 18px 50px rgba(0,0,0,.3);
+    }
+
+    .card.pad{padding:28px}
+
+    .card.feature{
+      border-color:rgba(25,237,26,.28);
+      background:
+        linear-gradient(180deg,rgba(25,237,26,.1),rgba(25,237,26,.03)),
+        linear-gradient(180deg,var(--panel),var(--panel2));
+    }
+
+    .card p{color:var(--muted);margin-bottom:0}
+
+    .project-main{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:18px;
+    }
+
+    .project-card img{
+      height:330px;
+      object-fit:cover;
+    }
+
+    .project-card.large img{
+      height:540px;
+    }
+
+    .project-copy{
+      padding:22px;
+    }
+
+    .side-projects{
+      display:grid;
+      gap:18px;
+    }
+
+    .number{
+      display:inline-grid;
+      place-items:center;
+      width:48px;
+      height:48px;
+      border-radius:14px;
+      background:rgba(25,237,26,.12);
+      color:var(--green);
+      font-weight:900;
+      margin-bottom:16px;
+    }
+
+    .process{
+      display:grid;
+      gap:16px;
+    }
+
+    .process-card{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:18px;
+      align-items:start;
+    }
+
+    .process-card .number{
+      background:var(--green);
+      color:#031003;
+      margin-bottom:0;
+    }
+
+    .contact-list{
+      list-style:none;
+      padding:0;
+      margin:22px 0 0;
+      display:grid;
+      gap:12px;
+    }
+
+    .contact-list li{
+      color:var(--muted);
+    }
+
+    footer{
