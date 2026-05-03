@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sonsie Carpentry | Renovations & Bathroom Renovations</title>
+<title>Sonsie Carpentry | Premium Renovations</title>
 
 <style>
 body {
@@ -14,26 +14,32 @@ body {
   color: white;
 }
 
+/* HEADER */
 header {
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.9);
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  z-index: 10;
 }
 
 header a {
   color: white;
   margin-left: 20px;
   text-decoration: none;
+  font-weight: bold;
 }
 
+/* HERO */
 .hero {
   height: 90vh;
   display: flex;
   align-items: center;
   padding: 40px;
   background:
-    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
     url("hero.jpg") center/cover no-repeat;
 }
 
@@ -42,10 +48,12 @@ header a {
   max-width: 600px;
 }
 
+/* SECTION */
 .section {
   padding: 60px 20px;
 }
 
+/* PROJECTS */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -60,7 +68,7 @@ header a {
 
 .card img {
   width: 100%;
-  height: 220px;
+  height: 250px;
   object-fit: cover;
 }
 
@@ -68,6 +76,12 @@ header a {
   padding: 10px;
 }
 
+/* DARK STRIP */
+.dark {
+  background: #0a0f0a;
+}
+
+/* CONTACT */
 .contact {
   background: #000;
   padding: 40px;
@@ -115,6 +129,13 @@ header a {
     </div>
 
   </div>
+</section>
+
+<section class="section dark">
+  <h2 style="padding:0 20px;">Property Strategy</h2>
+  <p style="padding:0 20px; max-width:600px;">
+    Pre-purchase and pre-sale renovation advice to help you avoid hidden costs and make smarter decisions before spending big money.
+  </p>
 </section>
 
 <section id="contact" class="contact">
