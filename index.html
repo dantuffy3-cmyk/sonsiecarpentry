@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sonsie Carpentry Pty Ltd | Renovations & Bathroom Renovations | Healesville</title>
-  <meta name="description" content="Sonsie Carpentry Pty Ltd delivers bathroom renovations, custom carpentry, decks, outdoor living, renovations and practical property advice across Healesville and the Yarra Valley." />
+
+  <title>Carpenter Healesville | Bathroom Renovations & Custom Carpentry | Sonsie Carpentry</title>
+  <meta name="description" content="Sonsie Carpentry Pty Ltd is a local carpenter in Healesville delivering bathroom renovations, custom carpentry, decks, outdoor living, renovation carpentry and practical property advice across the Yarra Valley." />
 
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
@@ -66,6 +67,11 @@
     .pills{display:flex;gap:12px;flex-wrap:wrap;list-style:none;padding:0;margin:30px 0 0}
     .pills li{border:1px solid rgba(25,237,26,.24);background:rgba(25,237,26,.08);padding:10px 14px;border-radius:999px;font-weight:800;color:#e5ffe5}
 
+    .proof-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:34px;max-width:980px}
+    .proof-item{border:1px solid rgba(25,237,26,.25);background:rgba(0,0,0,.36);border-radius:18px;padding:16px 18px;box-shadow:0 10px 26px rgba(0,0,0,.24)}
+    .proof-item strong{display:block;font-size:1.02rem;line-height:1.15;color:#fff}
+    .proof-item span{display:block;color:var(--muted);font-size:.88rem;margin-top:4px}
+
     section{padding:92px 0}
     .dark{background:linear-gradient(180deg,#070907,#0b100b);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
     .image-section{background:linear-gradient(135deg,rgba(5,7,5,.92),rgba(5,7,5,.86)),url("bathroom3-renovation.jpg") center/cover no-repeat;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -89,8 +95,14 @@
     .process-card{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
     .process-no{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:14px;background:var(--green);color:#041004;font-weight:900}
 
+    .note{margin-top:18px;border-left:4px solid var(--green);background:rgba(25,237,26,.08);padding:16px 18px;border-radius:16px;color:#dfe8dc}
+    .note strong{color:#fff}
+
     .quote{padding:46px 0;background:#020302;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
     .quote-panel{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;background:radial-gradient(circle at top right,rgba(25,237,26,.16),transparent 26%),linear-gradient(135deg,#000,#0f160f);border:1px solid rgba(25,237,26,.22);border-radius:30px;padding:30px;box-shadow:var(--shadow)}
+
+    .service-area{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+    .service-area span{border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.05);padding:9px 12px;border-radius:999px;color:#e8eee6;font-weight:800;font-size:.92rem}
 
     .contact-list{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:13px}
     .contact-list li{display:flex;gap:12px;color:var(--muted)}
@@ -102,6 +114,7 @@
     @media(max-width:980px){
       nav{display:none}
       .grid3,.grid2,.projects{grid-template-columns:1fr}
+      .proof-strip{grid-template-columns:repeat(2,1fr)}
       .project.big img,.project img{height:320px}
       .quote-panel{grid-template-columns:1fr}
     }
@@ -121,6 +134,7 @@
       .card{border-radius:24px;padding:22px}
       .project{padding:0}
       .project.big img,.project img{height:250px}
+      .proof-strip{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -144,7 +158,7 @@
       <a href="#contact">Contact</a>
     </nav>
 
-    <a class="btn btn-primary" href="#contact">Request a Quote</a>
+    <a class="btn btn-primary" href="tel:0449738233">Call Dan — 0449 738 233</a>
   </div>
 </header>
 
@@ -157,7 +171,7 @@
 
       <div class="buttons">
         <a class="btn btn-primary" href="#projects">View Work</a>
-        <a class="btn btn-dark" href="#contact">Contact Sonsie Carpentry</a>
+        <a class="btn btn-dark" href="tel:0449738233">Call Dan — 0449 738 233</a>
       </div>
 
       <ul class="pills">
@@ -167,6 +181,25 @@
         <li>Decks & outdoor living</li>
         <li>Trade coordination</li>
       </ul>
+
+      <div class="proof-strip" aria-label="Sonsie Carpentry trust proof">
+        <div class="proof-item">
+          <strong>5.0 ★ Google-rated</strong>
+          <span>13 Google reviews</span>
+        </div>
+        <div class="proof-item">
+          <strong>20+ years</strong>
+          <span>Renovation carpentry experience</span>
+        </div>
+        <div class="proof-item">
+          <strong>Local Healesville carpenter</strong>
+          <span>Yarra Valley focused</span>
+        </div>
+        <div class="proof-item">
+          <strong>Quality workmanship</strong>
+          <span>Bathrooms, decks & renovations</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -262,6 +295,7 @@
         <span class="eyebrow">Property Strategy</span>
         <h2>Practical renovation advice before you commit big money.</h2>
         <p class="lead">Sonsie Carpentry can help buyers, sellers and homeowners understand hidden renovation costs, must-do works, improvement priorities and where money is best spent.</p>
+
         <div class="buttons">
           <a class="btn btn-primary" href="#contact">Ask About Property Advice</a>
         </div>
@@ -282,6 +316,10 @@
           <h3>Renovation Priority Planning</h3>
           <p>Separate urgent work from important upgrades and optional improvements so the project starts in the right order.</p>
         </article>
+
+        <div class="note">
+          <strong>Important note:</strong> Renovation advice is practical carpentry and renovation guidance only. It is not a building inspection, engineering report, pest inspection or property valuation.
+        </div>
       </div>
     </div>
   </section>
@@ -349,7 +387,7 @@
       <div>
         <span class="eyebrow">Contact</span>
         <h2>Planning a renovation, bathroom upgrade or custom carpentry project?</h2>
-        <p class="lead">Enquiries are welcome for quality residential projects across Healesville, the Yarra Valley and surrounding areas.</p>
+        <p class="lead">Enquiries are welcome for quality residential projects across Healesville, Badger Creek, Chum Creek, Yarra Glen, Coldstream, Lilydale, Woori Yallock and the wider Yarra Valley.</p>
 
         <div class="buttons">
           <a class="btn btn-primary" href="tel:0449738233">Call 0449 738 233</a>
@@ -362,6 +400,17 @@
         <p><strong>Phone:</strong> <a href="tel:0449738233">0449 738 233</a></p>
         <p><strong>Email:</strong> <a href="mailto:admin@sonsiecarpentry.com">admin@sonsiecarpentry.com</a></p>
         <p><strong>Area:</strong> Healesville, Yarra Valley and surrounding areas</p>
+
+        <div class="service-area" aria-label="Service areas">
+          <span>Healesville</span>
+          <span>Badger Creek</span>
+          <span>Chum Creek</span>
+          <span>Yarra Glen</span>
+          <span>Coldstream</span>
+          <span>Lilydale</span>
+          <span>Woori Yallock</span>
+          <span>Yarra Valley</span>
+        </div>
 
         <ul class="contact-list">
           <li><span class="tick">✓</span><span>Bathroom renovations</span></li>
