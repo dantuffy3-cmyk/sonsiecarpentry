@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="en">
 <head>
@@ -95,6 +96,87 @@
     .process-card{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
     .process-no{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:14px;background:var(--green);color:#041004;font-weight:900}
 
+    .property-advice-panel{
+      max-width:1150px;
+      margin:auto;
+    }
+
+    .property-advice-header{
+      max-width:900px;
+      margin:0 0 34px;
+    }
+
+    .property-advice-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:26px;
+    }
+
+    .property-advice-card{
+      position:relative;
+      overflow:hidden;
+      min-height:250px;
+      background:
+        radial-gradient(circle at top right,rgba(25,237,26,.16),transparent 32%),
+        linear-gradient(180deg,rgba(14,51,18,.95),rgba(10,20,12,.98));
+      border:1px solid rgba(25,237,26,.25);
+      border-radius:28px;
+      padding:28px;
+      box-shadow:0 18px 44px rgba(0,0,0,.34);
+    }
+
+    .property-advice-card:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(135deg,rgba(255,255,255,.06),transparent 45%);
+      pointer-events:none;
+    }
+
+    .property-advice-card h3{
+      position:relative;
+      color:#fff;
+      font-size:1.35rem;
+      margin-bottom:14px;
+    }
+
+    .property-advice-card p{
+      position:relative;
+      color:#d6dfd2;
+      margin-bottom:0;
+    }
+
+    .property-advice-note{
+      margin-top:22px;
+      background:rgba(0,0,0,.44);
+      border:1px solid rgba(255,255,255,.12);
+      border-left:4px solid var(--green);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:0 14px 38px rgba(0,0,0,.24);
+    }
+
+    .property-advice-note h3{
+      color:var(--green);
+      margin-bottom:10px;
+    }
+
+    .property-advice-note p{
+      color:#dfe8dc;
+      margin-bottom:0;
+    }
+
+    .property-advice-note .disclaimer{
+      color:#aeb8ab;
+      font-size:.92rem;
+      margin-top:14px;
+    }
+
+    .strategy-buttons{
+      margin-top:30px;
+    }
+
     .note{margin-top:18px;border-left:4px solid var(--green);background:rgba(25,237,26,.08);padding:16px 18px;border-radius:16px;color:#dfe8dc}
     .note strong{color:#fff}
 
@@ -113,10 +195,11 @@
 
     @media(max-width:980px){
       nav{display:none}
-      .grid3,.grid2,.projects{grid-template-columns:1fr}
+      .grid3,.grid2,.projects,.property-advice-grid{grid-template-columns:1fr}
       .proof-strip{grid-template-columns:repeat(2,1fr)}
       .project.big img,.project img{height:320px}
       .quote-panel{grid-template-columns:1fr}
+      .property-advice-card{min-height:auto}
     }
 
     @media(max-width:640px){
@@ -135,6 +218,8 @@
       .project{padding:0}
       .project.big img,.project img{height:250px}
       .proof-strip{grid-template-columns:1fr}
+      .property-advice-card{border-radius:24px;padding:24px}
+      .property-advice-note{border-radius:22px;padding:22px}
     }
   </style>
 </head>
@@ -153,7 +238,7 @@
     <nav>
       <a href="#projects">Projects</a>
       <a href="#services">Services</a>
-      <a href="#strategy">Property Strategy</a>
+      <a href="#strategy">Property Advice</a>
       <a href="#process">Process</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -290,36 +375,54 @@
   </section>
 
   <section class="image-section" id="strategy">
-    <div class="wrap grid2">
-      <div>
-        <span class="eyebrow">Property Strategy</span>
-        <h2>Practical renovation advice before you commit big money.</h2>
-        <p class="lead">Sonsie Carpentry can help buyers, sellers and homeowners understand hidden renovation costs, must-do works, improvement priorities and where money is best spent.</p>
+    <div class="wrap property-advice-panel">
+      <div class="property-advice-header">
+        <span class="eyebrow">Property Renovation Advice</span>
+        <h2>Make smarter renovation decisions before you spend serious money.</h2>
+        <p class="lead">
+          Sonsie Carpentry helps buyers, sellers and homeowners understand renovation risks, hidden costs, priority works and smart next steps before committing to a purchase, sale or major renovation.
+        </p>
 
-        <div class="buttons">
-          <a class="btn btn-primary" href="#contact">Ask About Property Advice</a>
+        <div class="buttons strategy-buttons">
+          <a class="btn btn-primary" href="tel:0449738233">Call Dan — 0449 738 233</a>
+          <a class="btn btn-dark" href="#contact">Ask About Property Advice</a>
         </div>
       </div>
 
-      <div class="process">
-        <article class="card feature">
+      <div class="property-advice-grid">
+        <article class="property-advice-card">
           <h3>Pre-Purchase Renovation Evaluation</h3>
-          <p>Understand pros, cons, hidden potential, future renovation costs and essential must-do works before buying.</p>
+          <p>
+            Before buying, understand likely renovation costs, hidden risks, urgent repairs and improvement potential.
+            This helps you make a smarter offer and avoid walking into expensive surprises.
+          </p>
         </article>
 
-        <article class="card">
+        <article class="property-advice-card">
           <h3>Pre-Sale Improvement Strategy</h3>
-          <p>Identify cost-effective improvements to prepare a home for market and improve buyer appeal without overcapitalising.</p>
+          <p>
+            Get clear on which upgrades may improve buyer appeal before selling — without wasting money on work that
+            may not return value.
+          </p>
         </article>
 
-        <article class="card">
+        <article class="property-advice-card">
           <h3>Renovation Priority Planning</h3>
-          <p>Separate urgent work from important upgrades and optional improvements so the project starts in the right order.</p>
+          <p>
+            Separate urgent repairs from important upgrades and optional improvements, so your renovation starts in the
+            right order and your budget is used wisely.
+          </p>
         </article>
+      </div>
 
-        <div class="note">
-          <strong>Important note:</strong> Renovation advice is practical carpentry and renovation guidance only. It is not a building inspection, engineering report, pest inspection or property valuation.
-        </div>
+      <div class="property-advice-note">
+        <h3>Real renovation experience. Practical advice. No guesswork.</h3>
+        <p>
+          This service is ideal for older homes, investment properties, pre-purchase decisions, pre-sale planning and homeowners who need honest guidance before committing to a builder, trade, sale or major spend.
+        </p>
+        <p class="disclaimer">
+          Important note: This is practical renovation advice based on carpentry and renovation experience. It is not a formal building inspection, engineering report, pest inspection, legal advice, financial advice or property valuation. Specialist reports may still be required depending on the property.
+        </p>
       </div>
     </div>
   </section>
@@ -431,3 +534,4 @@
 </footer>
 </body>
 </html>
+```
