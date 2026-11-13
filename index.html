@@ -112,23 +112,33 @@
     }
 
     .head {
-      min-height: 82px;
-      display: flex;
+      position: relative;
+      width: min(73.75rem, calc(100% - 32px));
+      min-height: 76px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto auto;
       align-items: center;
-      justify-content: space-between;
-      gap: 20px;
+      gap: 8px;
+      padding: 6px 0;
     }
 
     .brand {
       display: flex;
       align-items: center;
       gap: 13px;
-      min-width: 230px;
+      min-width: 0;
+      width: fit-content;
+    }
+
+    .brand > span {
+      min-width: 0;
+      overflow-wrap: anywhere;
     }
 
     .site-logo {
-      width: 58px;
-      height: 58px;
+      width: 50px;
+      height: 50px;
+      flex: none;
       border-radius: 50%;
       object-fit: contain;
       filter: drop-shadow(0 0 14px rgba(25, 237, 26, .18));
@@ -151,14 +161,8 @@
       margin-top: 3px;
     }
 
-    nav {
-      display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-    }
-
     nav a {
-      padding: 10px 11px;
+      padding: 8px 10px;
       border-radius: 12px;
       color: var(--muted);
       font-weight: 800;
@@ -294,7 +298,21 @@
     }
 
     section {
-      padding: 92px 0;
+      --section-padding: 92px;
+      padding: var(--section-padding) 0;
+    }
+
+    /* The section's existing top padding supplies most of the anchor clearance. */
+    main section[id] {
+      scroll-margin-top: max(0px, calc(var(--header-height, 83px) + .75rem - var(--section-padding)));
+    }
+
+    #top {
+      scroll-margin-top: var(--header-height, 83px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
     }
 
     .dark {
@@ -571,11 +589,120 @@
       flex-wrap: wrap;
     }
 
-    @media (max-width: 980px) {
-      nav {
-        display: none;
-      }
+    .mobile-header-call,
+    .mobile-menu-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      min-height: 44px;
+      padding: 7px 12px;
+      border-radius: 12px;
+      white-space: nowrap;
+    }
 
+    .mobile-header-call {
+      color: #041004;
+      background: var(--green);
+      font-weight: 900;
+    }
+
+    .mobile-menu-toggle {
+      color: #fff;
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    header a:focus, header button:focus {
+      outline: 3px solid #fff;
+      outline-offset: 2px;
+    }
+
+    .desktop-header-call,
+    .head nav {
+      display: none;
+    }
+
+    .head nav.is-open {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      gap: 4px;
+      padding: 8px 6px 12px;
+      max-height: calc(100vh - var(--header-height, 83px));
+      max-height: calc(100dvh - var(--header-height, 83px));
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 0 0 12px 12px;
+    }
+
+    .head nav a {
+      display: flex;
+      align-items: center;
+      min-height: 44px;
+      flex-shrink: 0;
+    }
+
+    .mobile-contact {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 4px;
+    }
+
+    .mobile-contact a { flex: 1 1 120px; }
+
+    @media (max-width: 24em) {
+      .head { gap: 6px; }
+      .brand { gap: 6px; }
+      .brand strong { font-size: 1rem; }
+      .site-logo { width: 36px; height: 36px; }
+      .mobile-header-call, .mobile-menu-toggle { padding: 7px 9px; }
+    }
+
+    @media (max-width: 17em) {
+      .site-logo { display: none; }
+    }
+
+    /* Choose the full navigation only when there is room at the reader's text size. */
+    @media (min-width: 64em) {
+      .head {
+        min-height: 82px;
+        column-gap: clamp(12px, 1.3vw, 22px);
+      }
+      .site-logo { width: 58px; height: 58px; }
+      .head nav, .head nav.is-open {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        gap: 2px;
+        padding: 0;
+        max-height: none;
+        overflow: visible;
+        background: transparent;
+        border: 0;
+      }
+      .head nav a { white-space: nowrap; }
+      .desktop-header-call { display: inline-flex; white-space: nowrap; }
+      .mobile-header-call, .mobile-menu-toggle, .mobile-contact { display: none; }
+    }
+
+    /* Reserve enough room for the full word Carpentry on smaller desktops. */
+    @media (min-width: 64em) and (max-width: 70em) {
+      .head .brand { gap: 8px; }
+      .head .site-logo { width: 44px; height: 44px; }
+      .head .brand strong { font-size: 1.12rem; }
+    }
+
+    @media (max-width: 980px) {
       .grid3,
       .grid2,
       .projects,
@@ -607,32 +734,9 @@
         width: min(var(--max), calc(100% - 22px));
       }
 
-      .head {
-        min-height: 76px;
-        gap: 10px;
-      }
-
-      .site-logo {
-        width: 50px;
-        height: 50px;
-      }
-
-      .brand {
-        min-width: auto;
-        gap: 10px;
-      }
-
-      .brand strong {
-        font-size: 1.05rem;
-      }
-
-      .brand span {
-        font-size: .62rem;
-      }
-
-      .head > .btn {
-        display: none;
-      }
+      .brand { gap: 8px; }
+      .brand strong { font-size: 1.05rem; }
+      .brand span { font-size: .62rem; }
 
       .hero {
         min-height: auto;
@@ -643,7 +747,7 @@
       }
 
       section {
-        padding: 70px 0;
+        --section-padding: 70px;
       }
 
       .buttons {
@@ -693,16 +797,23 @@
       </span>
     </a>
 
-    <nav aria-label="Main navigation">
+    <a class="mobile-header-call" href="tel:0449738233" aria-label="Call Sonsie Carpentry on 0449 738 233">Call</a>
+    <button class="mobile-menu-toggle" type="button" aria-controls="sonsie-main-nav"
+      aria-expanded="false" aria-label="Open menu">Menu</button>
+    <nav id="sonsie-main-nav" aria-label="Main navigation">
       <a href="#projects">Projects</a>
       <a href="#services">Services</a>
       <a href="#advice">Property Advice</a>
       <a href="#approach">Approach</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
+      <div class="mobile-contact" aria-label="Contact Sonsie Carpentry">
+        <a class="btn btn-primary" href="tel:0449738233">Call Dan</a>
+        <a class="btn btn-dark" href="mailto:admin@sonsiecarpentry.com">Email Dan</a>
+      </div>
     </nav>
 
-    <a class="btn btn-primary" href="tel:0449738233">
+    <a class="btn btn-primary desktop-header-call" href="tel:0449738233">
       Call Dan — 0449 738 233
     </a>
 
@@ -1443,6 +1554,54 @@
 
   </div>
 </footer>
+
+<script>
+  // Sonsie V2.1: no tracking, network calls, or dependencies.
+  (() => {
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const menu = document.querySelector('nav[aria-label="Main navigation"]');
+    if (!toggle || !menu) return;
+    const closeMenu = (returnFocus = false) => {
+      menu.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+      if (returnFocus) toggle.focus();
+    };
+    toggle.addEventListener('click', () => {
+      syncHeader();
+      const opening = toggle.getAttribute('aria-expanded') !== 'true';
+      menu.classList.toggle('is-open', opening);
+      toggle.setAttribute('aria-expanded', String(opening));
+      toggle.setAttribute('aria-label', opening ? 'Close menu' : 'Open menu');
+    });
+    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => closeMenu()));
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') closeMenu(true);
+    });
+    document.addEventListener('click', e => {
+      if (toggle.getAttribute('aria-expanded') === 'true' && !toggle.contains(e.target) && !menu.contains(e.target)) closeMenu();
+    });
+    const header = toggle.closest('header');
+    header.addEventListener('focusout', e => {
+      if (e.relatedTarget && !header.contains(e.relatedTarget)) closeMenu();
+    });
+
+    const syncHeader = () => {
+      const height = Math.ceil(header.getBoundingClientRect().height);
+      if (document.documentElement.style.getPropertyValue('--header-height') !== height + 'px')
+        document.documentElement.style.setProperty('--header-height', height + 'px');
+      if (!toggle.getClientRects().length && menu.classList.contains('is-open')) closeMenu();
+    };
+    syncHeader();
+    if ('ResizeObserver' in window) new ResizeObserver(syncHeader).observe(header);
+    window.addEventListener('resize', syncHeader);
+    // A breakpoint change can alter the menu mode without changing the header height.
+    const wide = window.matchMedia('(min-width: 64em)');
+    const syncMode = () => { if (wide.matches) closeMenu(); syncHeader(); };
+    if (wide.addEventListener) wide.addEventListener('change', syncMode);
+    else wide.addListener(syncMode);
+  })();
+</script>
 
 </body>
 </html>
